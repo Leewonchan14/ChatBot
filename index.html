@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content_box {
+        width: 600px;
+        height: 300px;
+        overflow-y: scroll;
+      }
+      .line {
+        display: flex;
+      }
+      .chat {
+        background-color: rgb(249, 241, 199);
+      }
+      .mine {
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content_box">
+      <p class="line"><span class="chat">안녕</span></p>
+      <p class="line"><span class="chat mine">안녕!</span></p>
+    </div>
+    <footer>
+      <input type="text" id="input" />
+      <button id="send">전송</button>
+    </footer>
+  </body>
+  <script>
+    document.querySelector('#send').addEventListener('click',function(){
+      var template = `<p class="line"><span class="chat mine">안녕!</span></p>`;
+      document.querySelector('.content_box').insertAdjacentHTML('beforeend',template)
+    })
+  </script>
+</html>
