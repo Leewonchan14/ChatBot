@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      html, body{
+        height: 100%;
+      }
+      body{
+        display: flex;
+        flex-direction: column;
+      }
       .title{
         display: flex;
       }
@@ -14,8 +21,9 @@
         margin: 0 auto;
       }
       .content_box {
+        min-height: 100px;
         width: auto;
-        height: 400px;
+        height: auto;
         overflow-y: scroll;
         padding: 10px;
       }
@@ -29,6 +37,7 @@
       .InputBox{
         display: flex;
         margin: 10px;
+        margin-top: auto;
         height: 40px;
       }
       #input{
